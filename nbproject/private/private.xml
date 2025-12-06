@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaCadastroCurso.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaPrincipal.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/GerenciadorMatriculas.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/GerenciadorAlunos.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/DialogoNovoCurso.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaPesquisa.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaEntrada.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/GerenciadorCursos.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/components/AlunoTableModel.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/panels/PanelPG1.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/interfaces/PanelInterface.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/interfaces/TextFieldInterface.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/DialogoEditarAluno.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/controller/CadastrarAlunoController.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/controller/CadastrarCursoController.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/controller/VincularAlunoCursoController.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/AlunoCursoDao.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/AlunoDao.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/CursoDao.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/DB.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/Dao.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/entity/Aluno.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/entity/AlunoCurso.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/model/dao/entity/Curso.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/components/CursoTableModel.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/components/TextFieldPG1.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/ui/Theme.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/util/CreateAdmin.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaCadastroAluno.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaPesquisarAluno.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/DialogoEditarCurso.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/DialogoEditarMatricula.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/DialogoNovaMatricula.java</file>
+            <file>file:/C:/Users/Gabriel/JavaApplication4/src/br/unimontes/ccet/dcc/pg1/view/TelaVincularAlunoCurso.java</file>
+        </group>
+    </open-files>
+</project-private>
