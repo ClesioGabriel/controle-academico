@@ -45,14 +45,6 @@ public class GerenciadorMatriculas extends javax.swing.JFrame {
         btnNovo.addActionListener(evt -> abrirDialogoNovaMatricula());
         painelBotoes.add(btnNovo);
 
-        JTextField tfFiltro = new JTextField(28);
-        tfFiltro.setFont(Theme.body(13));
-        JButton btnBuscar = new JButton("Buscar");
-        Theme.styleSecondaryButton(btnBuscar);
-        btnBuscar.addActionListener(evt -> filtrarMatriculas(tfFiltro.getText().trim()));
-        painelBotoes.add(tfFiltro);
-        painelBotoes.add(btnBuscar);
-
         painelPrincipal.add(painelBotoes, BorderLayout.NORTH);
 
         // Painel Central com Tabela
@@ -133,42 +125,6 @@ public class GerenciadorMatriculas extends javax.swing.JFrame {
             }
         } catch (SQLException | DAOException ex) {
             JOptionPane.showMessageDialog(this, "Erro ao carregar matrículas: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    private void filtrarMatriculas(String q) {
-        tableModel.setRowCount(0);
-        try {
-            AlunoCursoDao acDao = new AlunoCursoDao();
-            List<AlunoCurso> lista = acDao.findAll();
-            AlunoDao alunoDao = new AlunoDao();
-            CursoDao cursoDao = new CursoDao();
-            String ql = q.toLowerCase();
-            for (AlunoCurso ac : lista) {
-                String cpf = ac.getCpfAluno();
-                int idCurso = ac.getIdCurso();
-                String dataMatricula = ac.getDataMatricula();
-
-                Aluno aluno = alunoDao.findOne(new Aluno(cpf));
-                Curso curso = new Curso();
-                curso.setId(idCurso);
-                curso = cursoDao.findOne(curso);
-
-                String nomeAluno = (aluno != null) ? aluno.getNome() : "(não encontrado)";
-                String nomeCurso = (curso != null) ? curso.getNome() : "(não encontrado)";
-
-                if (cpf.contains(q) || nomeAluno.toLowerCase().contains(ql) || nomeCurso.toLowerCase().contains(ql)) {
-                    tableModel.addRow(new Object[]{
-                        br.unimontes.ccet.dcc.pg1.model.dao.service.Utils.formatCPF(cpf),
-                        nomeAluno,
-                        idCurso,
-                        nomeCurso,
-                        br.unimontes.ccet.dcc.pg1.model.dao.service.Utils.toDisplayDate(dataMatricula)
-                    });
-                }
-            }
-        } catch (SQLException | DAOException ex) {
-            JOptionPane.showMessageDialog(this, "Erro ao filtrar matrículas: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 

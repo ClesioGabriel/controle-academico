@@ -40,15 +40,6 @@ public class GerenciadorAlunos extends javax.swing.JFrame {
         btnNovo.addActionListener(evt -> abrirDialogoNovoAluno());
         painelBotoes.add(btnNovo);
 
-        // Campo de filtro
-        JTextField tfFiltro = new JTextField(24);
-        tfFiltro.setFont(Theme.body(13));
-        JButton btnBuscar = new JButton("Buscar");
-        Theme.styleSecondaryButton(btnBuscar);
-        btnBuscar.addActionListener(evt -> filtrarAlunos(tfFiltro.getText().trim()));
-        painelBotoes.add(tfFiltro);
-        painelBotoes.add(btnBuscar);
-
         painelPrincipal.add(painelBotoes, BorderLayout.NORTH);
 
         // Painel Central com Tabela
@@ -117,29 +108,6 @@ public class GerenciadorAlunos extends javax.swing.JFrame {
             }
         } catch (SQLException | DAOException ex) {
             JOptionPane.showMessageDialog(this, "Erro ao carregar alunos: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    private void filtrarAlunos(String q) {
-        tableModel.setRowCount(0);
-        try {
-            AlunoDao dao = new AlunoDao();
-            List<Aluno> alunos = dao.findAll();
-            String ql = q.toLowerCase();
-            for (Aluno aluno : alunos) {
-                if (aluno.getCpf().contains(q) || aluno.getNome().toLowerCase().contains(ql)) {
-                    tableModel.addRow(new Object[]{
-                        br.unimontes.ccet.dcc.pg1.model.dao.service.Utils.formatCPF(aluno.getCpf()),
-                        aluno.getNome(),
-                        br.unimontes.ccet.dcc.pg1.model.dao.service.Utils.toDisplayDate(aluno.getDataNascimento()),
-                        aluno.getTelefone(),
-                        aluno.getEmail(),
-                        aluno.getSituacao()
-                    });
-                }
-            }
-        } catch (SQLException | DAOException ex) {
-            JOptionPane.showMessageDialog(this, "Erro ao filtrar alunos: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 

@@ -40,14 +40,6 @@ public class GerenciadorCursos extends javax.swing.JFrame {
         btnNovo.addActionListener(evt -> abrirDialogoNovoCurso());
         painelBotoes.add(btnNovo);
 
-        JTextField tfFiltro = new JTextField(28);
-        tfFiltro.setFont(Theme.body(13));
-        JButton btnBuscar = new JButton("Buscar");
-        Theme.styleSecondaryButton(btnBuscar);
-        btnBuscar.addActionListener(evt -> filtrarCursos(tfFiltro.getText().trim()));
-        painelBotoes.add(tfFiltro);
-        painelBotoes.add(btnBuscar);
-
         painelPrincipal.add(painelBotoes, BorderLayout.NORTH);
 
         // Painel Central com Tabela
@@ -117,30 +109,6 @@ public class GerenciadorCursos extends javax.swing.JFrame {
             }
         } catch (SQLException | DAOException ex) {
             JOptionPane.showMessageDialog(this, "Erro ao carregar cursos: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    private void filtrarCursos(String q) {
-        tableModel.setRowCount(0);
-        try {
-            CursoDao dao = new CursoDao();
-            List<Curso> cursos = dao.findAll();
-            String ql = q.toLowerCase();
-            for (Curso curso : cursos) {
-                if (String.valueOf(curso.getId()).contains(q) || curso.getNome().toLowerCase().contains(ql)) {
-                    tableModel.addRow(new Object[]{
-                        curso.getId(),
-                        curso.getNome(),
-                        curso.getDescricao(),
-                        curso.getCargaHoraria(),
-                        curso.getDuracao(),
-                        curso.getModalidade(),
-                        curso.getTurno()
-                    });
-                }
-            }
-        } catch (SQLException | DAOException ex) {
-            JOptionPane.showMessageDialog(this, "Erro ao filtrar cursos: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
